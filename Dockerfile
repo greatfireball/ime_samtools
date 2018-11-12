@@ -45,3 +45,7 @@ RUN wget -O - https://github.com/samtools/samtools/releases/download/${SAMTOOLS_
     make install && \
     cd /tmp && \
     rm -rf installation
+
+WORKDIR /data
+ENTRYPOINT ["samtools"]
+CMD ["--help"]
