@@ -20,6 +20,7 @@ RUN apt update && \
     	wget \
 	autoconf \
 	automake \
+	ca-certificates \
 	make \
 	gcc \
 	perl \
