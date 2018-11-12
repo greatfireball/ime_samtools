@@ -2,6 +2,11 @@
 ## ime_samtools
 This repository contains the Dockerfile to create a docker image for the samtools software package.
 
+## Usage of this docker image
+Calling `samtools` is the default entrypoint of this image. The parameter `--help` is the default command. Therefore, running the image will result in a call of `samtools --help` within the folder `/data`.
+### Data im-/export
+The working directory `/data` is defined as a volume and can be used for data im- and export while using this image.
+
 ## Current version
 The current version is samtools [![](https://images.microbadger.com/badges/version/greatfireball/ime_samtools:master.svg)](https://microbadger.com/images/greatfireball/ime_samtools:master "Get your own version badge on microbadger.com").
 
