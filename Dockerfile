@@ -17,18 +17,19 @@ LABEL maintainer="frank.foerster@ime.fraunhofer.de" \
 # Package list derived from INSTALL instructions from https://github.com/samtools/samtools/blob/develop/INSTALL
 RUN apt update && \
     apt install --yes --no-install-recommends \
-    	wget \
 	autoconf \
 	automake \
+	bzip2 \
 	ca-certificates \
-	make \
 	gcc \
-	perl \
-	zlib1g-dev \
 	libbz2-dev \
 	liblzma-dev \
 	libcurl4-gnutls-dev \
 	libssl-dev \
-	libncurses5-dev && \
+	libncurses5-dev \
+	make \
+	perl \
+	wget \
+	zlib1g-dev && \
     apt autoclean && \
     rm -rf /var/lib/apt/lists/* /var/log/dpkg.log
