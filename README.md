@@ -8,7 +8,7 @@ Calling `samtools` is the default entrypoint of this image. The parameter `--hel
 The working directory `/data` is defined as a volume and can be used for data im- and export while using this image.
 
 ## Current version
-The current version is samtools [![](https://images.microbadger.com/badges/version/greatfireball/ime_samtools:master.svg)](https://microbadger.com/images/greatfireball/ime_samtools:master "Get your own version badge on microbadger.com").
+The current version is samtools [![](https://images.microbadger.com/badges/version/greatfireball/ime_samtools:v1.2.svg)](https://microbadger.com/images/greatfireball/ime_samtools:v1.2 "Get your own version badge on microbadger.com").
 
 | Version tag/branch | Size | Commit |
 |-|-|-|
