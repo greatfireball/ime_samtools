@@ -30,6 +30,7 @@ RUN apt update && \
 	make \
 	perl \
 	wget \
+	xz-utils \
 	zlib1g-dev && \
     apt autoclean && \
     rm -rf /var/lib/apt/lists/* /var/log/dpkg.log
@@ -39,7 +40,6 @@ ENV SAMTOOLS_VERSION=1.2
 RUN wget -O - https://github.com/samtools/samtools/releases/download/${SAMTOOLS_VERSION}/samtools-${SAMTOOLS_VERSION}.tar.bz2 | \
     tar xjvf - && \
     cd samtools-${SAMTOOLS_VERSION} && \
-    ./configure && \
     make && \
     make test && \
     make install && \
