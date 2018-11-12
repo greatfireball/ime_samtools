@@ -33,3 +33,15 @@ RUN apt update && \
 	zlib1g-dev && \
     apt autoclean && \
     rm -rf /var/lib/apt/lists/* /var/log/dpkg.log
+
+WORKDIR /tmp/installation
+ENV SAMTOOLS_VERSION=1.9
+RUN wget -O - https://github.com/samtools/samtools/releases/download/${SAMTOOLS_VERSION}/samtools-${SAMTOOLS_VERSION}.tar.bz2 | \
+    tar xjvf - && \
+    cd samtools-${SAMTOOLS_VERSION} && \
+    ./configure && \
+    make && \
+    make test && \
+    make install && \
+    cd /tmp && \
+    rm -rf installation
