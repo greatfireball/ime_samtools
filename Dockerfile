@@ -14,16 +14,20 @@ LABEL maintainer="frank.foerster@ime.fraunhofer.de" \
       org.label-schema.build-date=${BUILD_DATE} \
       org.label-schema.vcs-url="https://github.com/greatfireball/ime_samtools.git"
 
-# Package list derived from forum post https://www.biostars.org/p/328831/
+# Package list derived from INSTALL instructions from https://github.com/samtools/samtools/blob/develop/INSTALL
 RUN apt update && \
     apt install --yes --no-install-recommends \
     	wget \
-	gcc \
+	autoconf \
+	automake \
 	make \
-	libbz2-dev \
+	gcc \
+	perl \
 	zlib1g-dev \
-	libncurses5-dev \
-	libncursesw5-dev \
-	liblzma-dev && \
+	libbz2-dev \
+	liblzma-dev \
+	libcurl4-gnutls-dev \
+	libssl-dev \
+	libncurses5-dev && \
     apt autoclean && \
     rm -rf /var/lib/apt/lists/* /var/log/dpkg.log
