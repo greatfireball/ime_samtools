@@ -35,7 +35,7 @@ RUN apt update && \
     rm -rf /var/lib/apt/lists/* /var/log/dpkg.log
 
 WORKDIR /tmp/installation
-ENV SAMTOOLS_VERSION=1.8
+ENV SAMTOOLS_VERSION=1.9
 RUN wget -O - https://github.com/samtools/samtools/releases/download/${SAMTOOLS_VERSION}/samtools-${SAMTOOLS_VERSION}.tar.bz2 | \
     tar xjvf - && \
     cd samtools-${SAMTOOLS_VERSION} && \
